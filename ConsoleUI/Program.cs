@@ -12,6 +12,7 @@ namespace ConsoleUI
         {
             /*
              * Todo follow all comments!! 
+             * All TODO's completed
              */
 
             #region Vehicles
@@ -48,6 +49,62 @@ namespace ConsoleUI
 
             #endregion            
             Console.ReadLine();
+
+
+            List<Vehicle> vehicles = new List<Vehicle>();
+
+            Car car1 = new Car()
+            {
+                Year = "2022",
+                Make = "Toyota",
+                Model = "Camry",
+                HasTrunk = "Yes",
+
+            };
+            car1.DriveAbstract();
+            car1.DriveVirtual();
+            Console.WriteLine();
+
+            Motorcycle moto1 = new Motorcycle()
+            {
+                Year = "2018",
+                Make = "Harley",
+                Model = "Cruiser",
+                HasCart = "Yes"               
+            };
+            moto1.DriveAbstract();
+            moto1.DriveVirtual();
+            Console.WriteLine();
+
+            Vehicle car2 = new Car()
+            {
+                Year = "2016",
+                Make = "Chevy",
+                Model = "Traverse",
+                HasTrunk = "Yes"
+            };
+            Console.WriteLine();
+
+            Vehicle moto2 = new Motorcycle()
+            {
+                Year = "2022",
+                Make = "Harley",
+                Model = "Iron 883",
+                HasCart = "No"
+            };
+
+            vehicles.Add(car1);
+            vehicles.Add(car2);
+            vehicles.Add(moto1);
+            vehicles.Add(moto2);
+
+            foreach (var item in vehicles)
+            {
+                Console.WriteLine($"{item.Year} {item.Make} {item.Model}");
+            }
+
+
+
         }
     }
 }
